@@ -39,6 +39,22 @@ The dataset also includes the following directories which were ignored:
 - train/Inertial Signals/
 - test/Inertial Signals/
 
+The data labels have titles that indicate different portions of the data test.
+- the first node is 't' or 'f' and indicates whether the feature came from the time or the frequency domain.
+- the second node is 'Body' or 'Gravity' and indicates whether the feature came directly from a body measurement or whether
+  it was filtered into just a gravity component.
+- the third node is 'Acc' or 'Gyro' and indicates whether the feature came from the accelerometer or the gyroscope.
+- the next two nodes are optional.  One option may be 'Jerk' which indicates the body linear acceleration and angular velocity
+  were derived in time to obtain Jerk signals.  Another option may be 'Mag" which indicates XXX.
+  
+mean(): Mean value
+std(): Standard deviation
+meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+
+
+
+
+
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width
 sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and
 body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational
