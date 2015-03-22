@@ -39,17 +39,21 @@ The dataset also includes the following directories which were ignored:
 - train/Inertial Signals/
 - test/Inertial Signals/
 
-The data labels have titles that indicate different portions of the data test.
-- the first node is 't' or 'f' and indicates whether the feature came from the time or the frequency domain.
-- the second node is 'Body' or 'Gravity' and indicates whether the feature came directly from a body measurement or whether
+The data has rows that repeat combinations of subject and activity for the differet measures.  This is because the sensor
+signals were sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window) but they were not labeled
+with a time variable.
+
+The data labels have titles that indicate different components of the data test.
+- The first node is 't' or 'f' and indicates whether the feature came from the time or the frequency domain.
+- The second node is 'Body' or 'Gravity' and indicates whether the feature came directly from a body measurement or whether
   it was filtered into just a gravity component.
-- the third node is 'Acc' or 'Gyro' and indicates whether the feature came from the accelerometer or the gyroscope.
-- the next two nodes are optional.  One option may be 'Jerk' which indicates the body linear acceleration and angular velocity
-  were derived in time to obtain Jerk signals.  Another option may be 'Mag" which indicates XXX.
-  
-mean(): Mean value
-std(): Standard deviation
-meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+- The third node is 'Acc' or 'Gyro' and indicates whether the feature came from the accelerometer or the gyroscope.
+- The next two nodes are optional and there can be one or the other or both.  One option may be 'Jerk' which indicates the
+  body linear acceleration and angular velocity were derived in time to obtain Jerk signals.  Another option may be 'Mag" which
+  indicates XXX.
+- The next node shows what type of measurement it was.  mean() for mean value, std() for standard deviation, and meanFreq() for
+  the weighted average of the frequency components.
+- The final node is optional and shows 'X','Y', or 'Z' for those components that were measured over three axes.
 
 
 
