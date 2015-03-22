@@ -31,7 +31,7 @@
 
         mergedData <- merge(extractTotalData,activityLabels,by.x="V1.1",by.y="V1")
 
-        reorderedData <- cbind(mergedData[,1],mergedData[,82],
+        reorderedData <- cbind(mergedData[,2],mergedData[,82],
                   mergedData[,3:81])
 
 ##Step 4:  Appropriately label the dataset with descriptive variable names
