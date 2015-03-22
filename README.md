@@ -1,8 +1,6 @@
 # CourseProject
 
-In order for this code to run, the source data needs to be downloaded to the working directory and unzipped.  Additionally,
-I created an interim file, dataLabels.csv, that also needs to be downloaded from this repo into the working directory.  The
-description of this file is in step 4 below.
+The code for this project is in a file called run_analysis.R. In order for this code to run, the source data referenced in the codebook needs to be downloaded to the working directory and unzipped.  Additionally, I created an interim file, dataLabels.csv, that also needs to be downloaded from this repo into the working directory.  The description of the CSV file is in step 4 below.
 
 In order to process the data, I completed 5 steps.
 
