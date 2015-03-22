@@ -104,6 +104,10 @@ tBodyGyroJerkMean
 The complete list of variables of each feature vector is available in 'features.txt'
 
 Processed data:
+
+as code book submitted to GitHub that modifies and updates the codebooks available to you with the data to indicate all the
+variables and summaries you calculated, along with units, and any other relevant information?
+
 In order to process the data, I completed 5 steps.
 describes each variable and its units.
 Step 1:  Combine the test and training data sets.
