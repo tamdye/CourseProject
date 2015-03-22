@@ -14,15 +14,9 @@ partitioned into two sets, training and test, where 70% of the volunteers was se
 for generating the test data.
 
 Raw data:
-The raw data can be dowloaded from here:
+The raw data can be dowloaded here:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width
-sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and
-body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational
-force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each
-window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt'
-for more details.
 
 The dataset includes the following files which were used:
 Labels and descriptions:
@@ -45,11 +39,14 @@ The dataset also includes the following directories which were ignored:
 - train/Inertial Signals/
 - test/Inertial Signals/
 
-Notes: 
-======
-- Features are normalized and bounded within [-1,1].
-- Each feature vector is a row on the text file.
 
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width
+sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and
+body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational
+force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each
+window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt'
+for more details.
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
 Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
@@ -107,8 +104,18 @@ tBodyGyroJerkMean
 The complete list of variables of each feature vector is available in 'features.txt'
 
 Processed data:
-describes each variable and its units.summary choices you made
-Lower camel case
-dataLabels.csv
-install.packages(dplyr)
-install.packages(reshape2)
+In order to process the data, I completed 5 steps.
+describes each variable and its units.
+Step 1:  Combine the test and training data sets.
+Step 2:  Extract only the columns with mean and standard deviation
+Step 3:  Rename the activities with their descriptive names
+Step 4:  Rename the variables with desciptive, tidy names
+  Lower camel case
+  dataLabels.csv
+  library(reshape2) and melt function
+  
+Step 5:  Summarize the data to find the average of each variable by subject and activity
+
+  library(dplyr) and group_by and summarize functions
+  summary choices you made
+
