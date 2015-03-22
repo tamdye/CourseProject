@@ -28,5 +28,5 @@ Step 4:  Rename the variables with desciptive names.
 Step 5:  Summarize the data to find the average of each variable by subject and activity.
 
   I called the library(dplyr) and used the group_by() function to summarize FinalData into a long, tall tidy data set that is
-  grouped by subject, activity, and variable.  Then I used the summarize() function to summarize all of the measures to the
-  mean of that measure.  Finally, I used the write() function to output the final tidy text file.
+  grouped by subject, activity, and variable. Then I used the summarize() function to summarize all of the measures to the
+  mean of that measure.  This is important in the tidy sense because the prior data set had mutliple identical rows representing   measures at points in time that were not labeled as such.  Finally, I used the write() function to output the final tidy text   file.
